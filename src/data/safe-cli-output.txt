@@ -1,0 +1,19 @@
+{
+  "version": 2000000,
+  "protocolversion": 70208,
+  "walletversion": 61000,
+  "balance": 0.00000000,
+  "locked_balance": 0.00000000,
+  "privatesend_balance": 0.00000000,
+  "blocks": 938422,
+  "timeoffset": 0,
+  "connections": 20,
+  "proxy": "",
+  "difficulty": 275640.3373281941,
+  "testnet": false,
+  "keypoololdest": 1536999623,
+  "keypoolsize": 999,
+  "paytxfee": 0.00000000,
+  "relayfee": 0.00001000,
+  "errors": "Warning: unknown new rules activated (versionbit 1)"
+}

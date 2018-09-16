@@ -1,0 +1,33 @@
+{
+    "log": {
+        "basic": {
+            "level": "debug",
+            "datefmt": "%Y-%m-%dT%H:%M:%S",
+            "formatter": "%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)6s\n%(message)s\n----------"
+        },
+        "console": {
+            "enable": true
+        },
+        "rotating": {
+            "enable": true,
+            "file": "log/safe-tk-hdc.log",
+            "maxBytes": 10485760,
+            "backupCount": 8,
+            "formatter": "%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s"
+        }
+    },
+    "detect": {
+        "cmd": "./mock-safe-cli getinfo",
+        "cmd_interval": 3
+    },
+    "session": {
+        "err_trigger_interval" : 10,
+        "lock_trigger_interval": 10
+    },
+    "action": {
+        "mail": {
+            "from:": "a",
+            "to": "b"
+        }
+    }
+}
