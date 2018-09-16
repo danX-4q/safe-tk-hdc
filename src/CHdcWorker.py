@@ -8,6 +8,7 @@ import json
 import logging
 
 from CHdcSession import CHdcSession
+from CHdcAction import CHdcAction
 import HdcConst
 
 class CHdcWorker :
@@ -22,6 +23,7 @@ class CHdcWorker :
         }
 
         self.dhc_sess = CHdcSession(prog_conf)
+        self.dhc_action = CHdcAction(prog_conf)
         self.logger = logging.getLogger()
 
     def start(self):
@@ -62,6 +64,11 @@ class CHdcWorker :
             self.logger.debug("cur_cmd_tt = %s, cmd_run = %s, blocks = %s, ret = %s" %
                 (cur_cmd_tt, cmd_run, blocks, ret)
             )
+
+            if ret :
+                self.dhc_action.sendMail(
+                    cur_cmd_tt, cmd_run, blocks
+                )
 
         else :
             return

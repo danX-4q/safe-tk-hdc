@@ -22,7 +22,7 @@ class CHdcSession :
 
         if self.last_cmd_run == None:
             self.last_cmd_run = cmd_run
-            self.last_cmd_tt = cur_cmd_tt
+            self.last_cmd_tt = cur_cmd_tt - self.sess_conf['init_last_time_offset']
             self.last_blocks = blocks
             return False
         

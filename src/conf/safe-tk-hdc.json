@@ -17,17 +17,21 @@
         }
     },
     "detect": {
-        "cmd": "./mock-safe-cli getinfo",
+        "cmd": "./mock-safe-cli.sh getinfo",
         "cmd_interval": 3
     },
     "session": {
-        "err_trigger_interval" : 10,
-        "lock_trigger_interval": 10
+        "init_last_time_offset": 780,
+        "err_trigger_interval" : 900,
+        "lock_trigger_interval": 900
     },
     "action": {
         "mail": {
-            "from:": "a",
-            "to": "b"
+            "smtp_host" : "smtp.exmail.qq.com",
+            "smtp_port" : 465,
+            "user": your mail account,
+            "password": account's password,
+            "to": "chenxd@bankledger.com;69082819@qq.com"
         }
     }
 }
