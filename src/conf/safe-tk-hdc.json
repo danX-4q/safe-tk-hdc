@@ -17,7 +17,7 @@
         }
     },
     "detect": {
-        "cmd": "./mock-safe-cli.sh getinfo",
+        "cmd": "/root/safe_v2.0.0_linux/safe-cli getinfo",
         "cmd_interval": 3
     },
     "session": {
